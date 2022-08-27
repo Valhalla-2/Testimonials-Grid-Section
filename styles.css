@@ -27,7 +27,7 @@ html {
 body {
   height: 100vh;
   width: 100%;
-  background-color:var(  --lgrayish-blue);
+  background-color: var(--lgrayish-blue);
   font-family: var(--barlow);
   font-size: var(--fond-md);
   display: flex;
@@ -36,26 +36,28 @@ body {
 }
 
 .testimonial-grid {
-  width: min(95%, 70rem);
+  width: min(95%, 80rem);
   border-radius: 1rem;
   display: grid;
-grid-template-areas:
-'daniel'
-'jonathan'
-'jeanette'
-'patrick'
-'kira' ;
+  grid-template-areas:
+    'daniel'
+    'jonathan'
+    'jeanette'
+    'patrick'
+    'kira';
   grid-gap: 20px;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem rgba(25, 23, 36, 0.25);
+
 }
 
 @media and (min-width:50em) {
   .testimonial-grid {
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* UNIVERSAL SELECTION */
-.testimonial {
+.testimonial-section {
   border-radius: 1rem;
   padding: 1.5rem;
 }
@@ -63,7 +65,7 @@ grid-template-areas:
 .flex {
   display: flex;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
 
 .author {
@@ -88,6 +90,7 @@ grid-template-areas:
 .profile-img {
   border-radius: 50%;
 }
+
 .grid-col-span-2 {
   grid-column: span 2;
 }
@@ -100,14 +103,13 @@ grid-template-areas:
   background-color: var(--m-violet);
   color: var(--white);
   grid-area: daniel;
-
 }
 
 /* JONATHAN SECTION */
 #jonathan-section {
   background-color: var(--vdgrayish-blue);
   color: var(--white);
-    grid-area: jonathan;
+  grid-area: jonathan;
 }
 
 /* JEANETTE SECTION */
@@ -130,12 +132,13 @@ grid-template-areas:
   color: var(--vdblackish-blue);
   grid-column-start: 4;
   grid-row: 1/span 2;
-    grid-area: kira;
+  grid-area: kira;
 }
+
 /* FOR RESPONSIVE LAYOUT */
 @media screen and (min-width: 33em) {
   .testimonial-grid {
-      grid-template-areas:
+    grid-template-areas:
       "daniel daniel"
       "jonathan jeanette"
       "kira kira"
@@ -146,16 +149,16 @@ grid-template-areas:
 @media screen and (min-width: 38em) {
   .testimonial-grid {
     grid-template-areas:
-       "daniel daniel"
-     'jonathan kira'
-     'jeanette kira'
-     'patrick patrick';
+      "daniel daniel"
+      'jonathan kira'
+      'jeanette kira'
+      'patrick patrick';
   }
 }
 
 @media screen and (min-width: 54em) {
   .testimonial-grid {
-      grid-template-areas:
+    grid-template-areas:
       "daniel daniel jonathan"
       "kira kira kira"
       "jeanette patrick patrick";
@@ -164,7 +167,7 @@ grid-template-areas:
 
 @media screen and (min-width: 75em) {
   .testimonial-grid {
-      grid-template-areas:
+    grid-template-areas:
       "daniel daniel jonathan kira"
       "jeanette patrick patrick kira";
   }
