@@ -78,10 +78,10 @@ body {
   opacity: .5;
 }
 
-.title {
+/* .title {
   font-size: var(--font-lg);
   margin: 1rem 0;
-}
+} */
 
 .description {
   opacity: .7;
